@@ -1,0 +1,73 @@
+.conatiner {
+	height: 91vh;
+	padding-top: 9vh;
+	background-color: #232427;
+}
+.header {
+	font-size: 30px;
+	text-align: center;
+}
+.workWrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 80vh;
+}
+.work {
+	flex: 1;
+	text-align: center;
+	margin: auto;
+}
+
+.workCard {
+	background-color: black;
+	margin: 3%;
+	padding: 3%;
+	position: relative;
+}
+.company {
+	font-size: 23px;
+	margin-bottom: 2%;
+}
+.position {
+	font-size: 20px;
+	opacity: 0;
+	transition: opacity 1s ease 700ms;
+}
+.position[data-visible='true'] {
+	opacity: 1;
+}
+.duration {
+	margin-bottom: 10%;
+}
+.detail {
+	margin-top: 5%;
+	opacity: 0;
+	transition: opacity 1s ease 700ms;
+}
+.detail[data-visible='true'] {
+	opacity: 1;
+}
+.detail li {
+	margin-bottom: 2%;
+	list-style-type: square;
+}
+
+.workRect {
+	fill: none;
+	stroke: var(--light-navy);
+	stroke-width: 2;
+	stroke-dasharray: 30;
+}
+@media (max-width: 768px) {
+	.workWrap {
+		display: flex;
+		flex-direction: column;
+	}
+	.conatiner {
+		height: 100%;
+	}
+	.workWrap {
+		height: auto;
+	}
+}

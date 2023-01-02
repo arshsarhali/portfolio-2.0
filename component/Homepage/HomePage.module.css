@@ -1,0 +1,18 @@
+.container {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	z-index: 2;
+}
+.introText {
+	color: rgb(193, 214, 240);
+	font-size: 50px;
+	padding-top: 20%;
+	padding-left: 10%;
+}
+@media (max-width: 768px) {
+	.introText {
+		width: 70%;
+		padding-top: 40%;
+	}
+}

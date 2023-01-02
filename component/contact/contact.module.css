@@ -1,0 +1,219 @@
+.container {
+	height: 91vh;
+	padding-top: 9vh;
+	display: block;
+	background-color: var(--light-black);
+}
+.header {
+	font-size: 30px;
+	text-align: center;
+	color: var(--lightest-navy);
+}
+
+.cardWrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80vh;
+}
+.card {
+	position: relative;
+	width: 800px;
+	height: 500px;
+	box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+		inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+		5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+	border-radius: 15px;
+	margin: auto;
+	transition: 0.5s;
+}
+
+.card:nth-child(1) .box .content a {
+	background: #2196f3;
+}
+.card:nth-child(2) .box .content a {
+	background: #e91e63;
+}
+.card .box {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
+	background: #2a2b2f;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	transition: 0.5s;
+	transform: translate(-10%, -10%);
+}
+.box:hover {
+	transform: translate(0%, 0%);
+}
+.box:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.03);
+}
+
+.contactForm {
+	text-align: center;
+	margin-top: 25px;
+	width: 700px;
+}
+
+.contactForm form {
+	position: relative;
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.nameField {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	width: 200px;
+	margin: auto;
+}
+
+.emailField {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	width: 200px;
+	margin: auto;
+}
+
+.messageField {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 4;
+
+	width: 600px;
+	margin: auto;
+}
+
+.contactFormHeading {
+	color: var(--lightest-navy);
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+
+.labelText {
+	color: var(--lightest-navy);
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+.inputField {
+	margin-top: 5px;
+	margin-bottom: 20px;
+	color: var(--dark-navy);
+	border: 1px solid var(--light-navy);
+	width: 90%;
+	padding: 10px;
+
+	border-radius: 4px;
+	background-color: var(--lightest-navy);
+	resize: vertical;
+}
+
+.textArea {
+	height: 90px;
+}
+.submitBtn {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 4;
+	grid-row-end: 5;
+	margin: auto;
+	background: var(--blue);
+	border-radius: 999px;
+	box-shadow: var(--blue) 0 10px 20px -10px;
+	box-sizing: border-box;
+	color: var(--lightest-navy);
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	opacity: 1;
+	outline: 0 solid transparent;
+	padding: 8px 18px;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	width: fit-content;
+	word-break: break-word;
+	border: 0;
+}
+.submitBtn:hover {
+	box-shadow: var(--dark-blue) 0 10px 20px -10px;
+	background: var(--dark-blue);
+}
+
+.response {
+	color: var(--green);
+}
+@media (max-width: 768px) {
+	.container {
+		height: auto;
+		padding-bottom: 50px;
+	}
+	.cardWrap {
+		height: auto;
+	}
+	.card .box {
+		transform: translate(0%, 0%);
+	}
+	.contactForm form {
+		position: relative;
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	.nameField {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 2;
+		width: 200px;
+		margin: auto;
+	}
+
+	.emailField {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 2;
+		width: 200px;
+		margin: auto;
+	}
+
+	.messageField {
+		grid-row-start: 3;
+		grid-row-end: 5;
+		grid-column-start: 1;
+		grid-column-end: 2;
+		width: 400px;
+		margin: auto;
+	}
+	.submitBtn {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 5;
+		grid-row-end: 6;
+	}
+	.card {
+		margin-top: 50px;
+		position: relative;
+		width: 800px;
+		height: 550px;
+	}
+}
