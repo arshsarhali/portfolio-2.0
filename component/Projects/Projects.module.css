@@ -148,7 +148,6 @@
 	isolation: isolate;
 	transition: opacity 0.5s ease 400ms;
 	z-index: 1;
-	opacity: 1;
 }
 .animateWord::after {
 	content: '';
@@ -182,11 +181,11 @@
 }
 
 .animateTitle {
-	color: rgb(239, 243, 255/0);
+	color: rgba(239 243 255/0);
 }
 
 .animateTitle[data-status='entered'] {
-	color: rgb(239, 243, 255/1);
+	color: rgba(239 243 255/1);
 }
 
 .animateTitle[data-status='entering'] {
@@ -195,19 +194,19 @@
 
 @keyframes titleTextReveal {
 	0% {
-		color: rgb(239, 243, 255/0);
+		color: rgba(239 243 255/0);
 	}
 
 	50% {
-		color: rgb(239, 243, 255/0);
+		color: rgba(239 243 255/0);
 	}
 
 	60% {
-		color: rgb(239, 243, 255/1);
+		color: rgba(239 243 255/1);
 	}
 
 	100% {
-		color: rgb(239, 243, 255/1);
+		color: rgba(239 243 255/1);
 	}
 }
 
@@ -241,8 +240,8 @@
 	}
 }
 
-.animateDetail[data-status='entered'] {
-	color: rgba(136 146 176/ 1);
+.animateDetail {
+	color: rgba(136 146 176/ 0);
 }
 
 .animateDetail[data-status='entered'] {
