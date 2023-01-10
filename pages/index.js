@@ -35,22 +35,13 @@ export default function Home() {
 	const projects = [
 		{
 			id: '1',
-			title: 'Netflix Clone',
-			text: 'A Netflix clone that uses Magic.link to login users, Hasura as database and Youtube API to fetch videos from Youtube.',
-			tech: 'NextJS, Hasura, Magic.link, Youtube API',
-			demoLink: 'https://flicknext-clone.arshsandhu.com/',
-			gitLink: 'https://github.com/arshsarhali/flickNext',
-			textures: [
-				{
-					srcSet: [flicknext, flicknextLarge],
-					placeholder: flicknextPlaceholder,
-				},
-			],
-		},
-		{
-			id: '2',
 			title: 'Prime Clothing',
-			text: 'An online clothing store build using Stripe as payment method, Firebase as database and Login.',
+			text: 'Prime Clothing is a clothing store where customer can buy clothes and pay for them using their credit card. User can also create an account on store to start shopping again from where they left.',
+			detail: [
+				'A React-based online clothing store that uses Firebase for authentication and storing user data.',
+				'Uses Redux to manage and centralize the state of application.',
+				'integrates Stripe to process payments for the clothes that users purchased through the website.',
+			],
 			tech: 'ReactJS, Redux, Firebase, Stripe',
 			demoLink: 'https://prime-clothing.arshsandhu.com/',
 			gitLink: 'https://github.com/arshsarhali/prime-clothing',
@@ -62,9 +53,34 @@ export default function Home() {
 			],
 		},
 		{
+			id: '2',
+			title: 'FlickNext',
+			text: 'FlickNext is a video streaming platform that shows popular youtube video from different categories. It also keep track of user watched history and videos that are liked by user.',
+			detail: [
+				'Utilizes NextJS to build video streaming website that uses Magik.link based on Web3 to login users.',
+				'Uses Hasura GraphQL Engine to utilize PostgreSQL database system for application to store user related data.',
+				'Maintained the GraphQL API to tracking the watched history and liked content of users, which was then displayed on the "Watch Again" and "My List" pages.',
+				'Uses YouTube API to fetch videos data from YouTube.',
+			],
+			tech: 'NextJS, Hasura, Magic.link, Youtube API',
+			demoLink: 'https://flicknext-clone.arshsandhu.com/',
+			gitLink: 'https://github.com/arshsarhali/flickNext',
+			textures: [
+				{
+					srcSet: [flicknext, flicknextLarge],
+					placeholder: flicknextPlaceholder,
+				},
+			],
+		},
+		{
 			id: '3',
 			title: 'NASA Mission',
-			text: 'NASA Mission control fetch the present and future SpaceX mission and also allow user to add new mission.',
+			text: 'NASA Mission Control is a web application that tracks the rocket launch and also mocks the scheduling of upcoming rockets launch by NASA.',
+			detail: [
+				'Utilizes ReactJS to develop the front-end of web application.',
+				'Uses MongoDB for database and NodeJS as backend to fetch the data and serve to front-end.',
+				'Serve REST APIs using Express and NodeJS of Planet list and Upcoming Launch list for front-end.',
+			],
 			tech: 'NodeJS, Express, ReactJS, MongoDB, SpaceX API',
 			demoLink: 'https://nasa-mission.arshsandhu.com/',
 			gitLink: 'https://github.com/arshsarhali/nasa-project',
@@ -79,6 +95,12 @@ export default function Home() {
 			id: '4',
 			title: 'Nearby Coffee',
 			text: 'Helps in find nearby coffee stores using location and also show Vancouver downtown stores as default.',
+			detail: [
+				'Utilizes Next.js to develop the web application.',
+				'Uses Foursquare to find the location of user and show nearby stores.',
+				'Images are fetched from Unsplash using Unsplash API',
+				'Stores the famous coffee store data using Airtable to show on homepage.',
+			],
 			tech: 'NextJs, FourSquare API, Airtable API, Unsplash API',
 			demoLink: 'https://coffee-stores.arshsandhu.com/',
 			gitLink: 'https://github.com/arshsarhali/coffee-store-finder',

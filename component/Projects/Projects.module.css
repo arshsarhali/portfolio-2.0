@@ -129,23 +129,26 @@
 }
 
 .animateContainer {
+	overflow: hidden;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	position: relative;
+	justify-content: center;
 	margin: auto;
 }
 .animateWord {
 	position: relative;
-	display: flex;
 	align-items: center;
 	line-height: 1;
 	animation-duration: 2.5s;
 	animation-delay: 600ms;
 	animation-fill-mode: forwards;
 	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition: opacity 0.5s ease 400ms;
 	isolation: isolate;
+	transition: opacity 0.5s ease 400ms;
+	z-index: 1;
+	opacity: 1;
 }
 .animateWord::after {
 	content: '';
@@ -179,11 +182,11 @@
 }
 
 .animateTitle {
-	color: rgba(204 214 246/0);
+	color: rgb(239, 243, 255/0);
 }
 
 .animateTitle[data-status='entered'] {
-	color: rgba(204 214 246/1);
+	color: rgb(239, 243, 255/1);
 }
 
 .animateTitle[data-status='entering'] {
@@ -192,6 +195,36 @@
 
 @keyframes titleTextReveal {
 	0% {
+		color: rgb(239, 243, 255/0);
+	}
+
+	50% {
+		color: rgb(239, 243, 255/0);
+	}
+
+	60% {
+		color: rgb(239, 243, 255/1);
+	}
+
+	100% {
+		color: rgb(239, 243, 255/1);
+	}
+}
+
+.animateText {
+	color: rgba(204 214 246/0);
+}
+
+.animateText[data-status='entered'] {
+	color: rgba(204 214 246/1);
+}
+
+.animateText[data-status='entering'] {
+	animation-name: textReveal;
+}
+
+@keyframes textReveal {
+	0% {
 		color: rgba(204 214 246/0);
 	}
 
@@ -208,19 +241,18 @@
 	}
 }
 
-.animateText {
-	color: rgba(136 146 176/ 0);
-}
-
-.animateText[data-status='entered'] {
+.animateDetail[data-status='entered'] {
 	color: rgba(136 146 176/ 1);
 }
 
-.animateText[data-status='entering'] {
-	animation-name: textReveal;
+.animateDetail[data-status='entered'] {
+	color: rgba(136 146 176/ 1);
 }
 
-@keyframes textReveal {
+.animateDetail[data-status='entering'] {
+	animation-name: detailReveal;
+}
+@keyframes detailReveal {
 	0% {
 		color: rgba(136 146 176/ 0);
 	}
@@ -237,7 +269,6 @@
 		color: rgba(136 146 176/ 1);
 	}
 }
-
 .animateTech {
 	color: rgba(100 255 218/ 0);
 }

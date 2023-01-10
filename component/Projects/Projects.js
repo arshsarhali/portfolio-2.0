@@ -33,8 +33,8 @@ const Projects = (props, projectRef) => {
 	}
 
 	const prevProject = () => {
-		const nextIndex = (projectIndex - 1) % projects.length
-		setProjectIndex(nextIndex)
+		const prevIndex = (projectIndex - 1) % projects.length
+		setProjectIndex(prevIndex)
 	}
 
 	return (
@@ -93,6 +93,7 @@ const Projects = (props, projectRef) => {
 												className={`${styles.animateWord} ${styles.animateTitle}`}
 												data-plus={true}
 												data-status={status}
+												style={{ delay: '600ms' }}
 											>
 												{item.title}
 											</span>
@@ -120,6 +121,33 @@ const Projects = (props, projectRef) => {
 												data-status={status}
 											>
 												{item.text}
+											</span>
+										)}
+									</Transition>
+								))}
+							</AnimatePresence>
+						</div>
+					</div>
+					<div className={styles.projectText}>
+						<div className={styles.animateContainer}>
+							<AnimatePresence>
+								{projects.map((item) => (
+									<Transition
+										unmount
+										in={item === currentProject}
+										timeout={{ enter: 3000, exit: 2000 }}
+										key={item.detail}
+									>
+										{(visible, status) => (
+											<span
+												aria-hidden
+												className={`${styles.animateWord} ${styles.animateDetail}`}
+												data-plus={true}
+												data-status={status}
+											>
+												{item.detail.map((item, key) => (
+													<li key={key}>{item}</li>
+												))}
 											</span>
 										)}
 									</Transition>
