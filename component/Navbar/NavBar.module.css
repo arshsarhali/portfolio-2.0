@@ -4,9 +4,11 @@
 	left: 0;
 	width: 100%;
 	z-index: 3;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.2);
 	animation: navmove 1s ease-in-out;
 	height: auto;
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
 }
 
 .homeContainer {
@@ -22,6 +24,7 @@
 }
 .homeContainer ul li {
 	color: rgb(167, 197, 233);
+	transition: color 1s;
 }
 @keyframes navmove {
 	from {
@@ -48,7 +51,8 @@
 	font-weight: 300;
 	padding: 0.5rem;
 	cursor: pointer;
-	color: black;
+	color: rgb(39, 169, 205);
+	transition: color 1s;
 }
 
 .navBorder {
@@ -62,7 +66,7 @@
 	border-color: black;
 	border-width: 3px;
 	border-style: solid;
-
+	transition: border-color 1s;
 	animation-name: Rotate;
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
@@ -126,17 +130,17 @@
 }
 
 .container li:hover {
-	color: rgb(39, 169, 205);
+	color: black;
 }
 
 .homeContainer li:hover {
 	color: white;
 }
-.homeContainer .navBorder:hover {
+.homeContainer li:hover .navBorder {
 	border-color: rgb(255, 255, 255);
 }
 
-.container .navBorder:hover {
+.container li:hover .navBorder {
 	border-color: rgb(39, 169, 205);
 }
 .gitLink {
@@ -191,12 +195,9 @@
 		font-weight: 300;
 		padding: 0.5rem;
 		cursor: pointer;
-		color: black;
-	}
-
-	.homeContainer li:hover {
 		color: rgb(39, 169, 205);
 	}
+
 	.navBorder {
 		display: none;
 	}
@@ -208,12 +209,14 @@
 		left: 0;
 		width: 100%;
 		z-index: 3;
-		background-color: white;
 		animation: navmove 1s ease-in-out;
 		height: auto;
+		background-color: rgba(116, 116, 116, 0.5);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
 	}
 	.homeContainer ul li {
-		color: black;
+		color: rgb(39, 169, 205);
 	}
 
 	.navToggle {
